@@ -5,6 +5,7 @@ public class Book {
     private String author;
     private String description;
     private double price;
+    private int booksRequested;
     private boolean isInStock;
 
     //getters and setters
@@ -48,6 +49,14 @@ public class Book {
         isInStock = inStock;
     }
 
+    public int getBooksRequested() {
+        return booksRequested;
+    }
+
+    public void setBooksRequested(int booksRequested) {
+        this.booksRequested = booksRequested;
+    }
+
     //default constructor
      Book() {
         bookTitle = "To Kill a Mockingbird";
@@ -55,16 +64,19 @@ public class Book {
         description = "explore race relations in the American South in the first half of the 20th century.";
         price = 10.25;
         isInStock = true;
+        booksRequested = 5;
     }
 
-    public Book(String titleBook, String authorBook, String descriptionBook, double priceBook, boolean isInStockBook ) {
+    public Book(String titleBook, String authorBook, String descriptionBook, double priceBook, boolean isInStockBook, int booksRequestedBook ) {
          bookTitle = titleBook;
          author = authorBook;
          description = descriptionBook;
          price = priceBook;
          isInStock = isInStockBook;
+         booksRequested = booksRequestedBook;
 
     }
+
 
 
 }
